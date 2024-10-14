@@ -43,4 +43,37 @@ Follow these instructions to set up and run the project on your local machine.
    cd backend
     npm install
    ```
+    
+## Running the Project
+1. **Backend (Node.js)**
+-Make sure the backend server is running on port 3001.
+1. **Go to the backend folder:**
+```bash
+cd backend
+```
+2. **Run the backend server:**
+ ```bash
+npm start
+```
+-The backend API will be available at http://localhost:3001
+1. **Frontend (Vue.js)**
+-The frontend runs on port 5173. Before running, make sure the backend URL is correctly set in the environment variables.
+
+1. **Environment Setup:**
+-Create an .env file in the frontend directory with the following content:
+```bash
+VITE_API_URL=http://localhost:3001
+```
+2. **Run the frontend development server:**
+```bash
+cd frontend
+npm run dev
+```
+-The frontend will be available at http://localhost:5173.
+
+## API Endpoints
+**The following endpoints are available from the backend:**
+- GET /api/tasks - Fetch all tasks
+- POST /api/tasks - Create a new task (JSON body: { text: string })
+- DELETE /api/tasks/:id - Delete a task by ID
    
